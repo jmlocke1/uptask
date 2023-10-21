@@ -1,4 +1,5 @@
 <?php
+use ConfigLocal;
 
 define('DIR_ROOT', dirname(dirname(__DIR__)));
 define('FUNCIONES_URL', DIR_ROOT.'/funciones');
@@ -19,7 +20,7 @@ class Config {
 	/**
 	 * Dominio del proyecto
 	 */
-	const DOMAIN_PROJECT = 'uptask.test';
+	const DOMAIN_PROJECT = ConfigLocal::DOMAIN_PROJECT;
 	/**
 	 * Carpeta de imágenes para PHP
 	 */
@@ -42,34 +43,34 @@ class Config {
 	/**
 	 * Host de la base de datos
 	 */
-	const DB_HOST = 'localhost';
+	const DB_HOST = ConfigLocal::DB_HOST;
 	/**
 	 * Usuario de la base de datos
 	 */
-	const DB_USER = 'usprueba';
+	const DB_USER = ConfigLocal::DB_USER;
 	/**
 	 * Password del usuario de la base de datos
 	 */
-	const DB_PASSWORD = 'usprueba';
+	const DB_PASSWORD = ConfigLocal::DB_PASSWORD;
 	/**
 	 * Nombre de la base de datos
 	 */
-	const DB_NAME = 'uptask_mvc';
+	const DB_NAME = ConfigLocal::DB_NAME;
 
 	// Configuración de mailer
 	/**
 	 * Host de mailtrap
 	 */
-	const MAILTRAP_HOST = 'smtp.mailtrap.io';
+	const MAILTRAP_HOST = ConfigLocal::MAILTRAP_HOST;
 	/**
 	 * Puerto de mailtrap
 	 */
-	const MAILTRAP_PORT = 2525;
-	const MAILTRAP_USERNAME = '7e616050a54470';
-	const MAILTRAP_PASSWORD = '9b8bd746ca9ac6';
+	const MAILTRAP_PORT = ConfigLocal::MAILTRAP_PORT;
+	const MAILTRAP_USERNAME = ConfigLocal::MAILTRAP_USERNAME;
+	const MAILTRAP_PASSWORD = ConfigLocal::MAILTRAP_PASSWORD;
 	/**
 	 * Email desde donde se mandan las notificaciones. En el despliegue
 	 * hay que poner el adecuado, pues este es de prueba y no existe.
 	 */
-	const MAIL_ORIGIN = 'cuentas@uptask.com';
+	const MAIL_ORIGIN = ConfigLocal::MAIL_ORIGIN;
 }
