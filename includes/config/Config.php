@@ -1,5 +1,7 @@
 <?php
-require_once 'ConfigLocal.php';
+namespace MVC\includes\config;
+
+use MVC\includes\config\ConfigLocal;
 define('DIR_ROOT', dirname(dirname(__DIR__)));
 define('FUNCIONES_URL', DIR_ROOT.'/funciones');
 define('TEMPLATES_URL', DIR_ROOT.'/includes/templates');
@@ -60,13 +62,13 @@ class Config {
 	/**
 	 * Host de mailtrap
 	 */
-	const MAILTRAP_HOST = ConfigLocal::MAILTRAP_HOST;
+	const MAIL_HOST = ConfigLocal::MAIL_HOST;
 	/**
 	 * Puerto de mailtrap
 	 */
-	const MAILTRAP_PORT = ConfigLocal::MAILTRAP_PORT;
-	const MAILTRAP_USERNAME = ConfigLocal::MAILTRAP_USERNAME;
-	const MAILTRAP_PASSWORD = ConfigLocal::MAILTRAP_PASSWORD;
+	const MAIL_PORT = ConfigLocal::MAIL_PORT;
+	const MAIL_USERNAME = ConfigLocal::MAIL_USERNAME;
+	const MAIL_PASSWORD = ConfigLocal::MAIL_PASSWORD;
 	/**
 	 * Email desde donde se mandan las notificaciones. En el despliegue
 	 * hay que poner el adecuado, pues este es de prueba y no existe.

@@ -1,6 +1,7 @@
 <?php
 namespace Classes;
 
+use MVC\includes\config\Config;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class Email {
@@ -18,14 +19,14 @@ class Email {
 	public function enviarConfirmacion(){
 		$mail = new PHPMailer();
 		$mail->isSMTP();
-		$mail->Host = 'smtp.mailtrap.io';
+		$mail->Host = Config::MAIL_HOST;
 		$mail->SMTPAuth = true;
 		$mail->Port = 2525;
-		$mail->Username = '7e616050a54470';
-		$mail->Password = '9b8bd746ca9ac6';
+		$mail->Username = Config::MAIL_USERNAME;
+		$mail->Password = Config::MAIL_PASSWORD;
 
-		$mail->setFrom('cuentas@uptask.com');
-		$mail->addAddress('cuentas@uptask.com', 'uptask.com');
+		$mail->setFrom(Config::MAIL_ORIGIN);
+		$mail->addAddress($this->email, Config::DOMAIN_PROJECT);
 		$mail->Subject = 'Confirma tu Cuenta';
 
 		$mail->isHTML(true);
@@ -45,14 +46,14 @@ class Email {
 	public function enviarInstrucciones(){
 		$mail = new PHPMailer();
 		$mail->isSMTP();
-		$mail->Host = 'smtp.mailtrap.io';
+		$mail->Host = Config::MAIL_HOST;
 		$mail->SMTPAuth = true;
 		$mail->Port = 2525;
-		$mail->Username = '7e616050a54470';
-		$mail->Password = '9b8bd746ca9ac6';
+		$mail->Username = Config::MAIL_USERNAME;
+		$mail->Password = Config::MAIL_PASSWORD;
 
-		$mail->setFrom('cuentas@uptask.com');
-		$mail->addAddress('cuentas@uptask.com', 'uptask.com');
+		$mail->setFrom(Config::MAIL_ORIGIN);
+		$mail->addAddress($this->email, Config::DOMAIN_PROJECT);
 		$mail->Subject = 'Restablece tu Password';
 
 		$mail->isHTML(true);
