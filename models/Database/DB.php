@@ -3,7 +3,6 @@ namespace Model\Database;
 
 use MVC\includes\config\Config;
 
-//require_once dirname(dirname(__DIR__))."/includes/config/Config.php";
 class DB {
     protected static $db;
     private $query;
