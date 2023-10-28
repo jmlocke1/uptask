@@ -1,7 +1,7 @@
 <?php
 namespace Model\Database;
 
-use Config;
+use MVC\includes\config\Config;
 
 //require_once dirname(dirname(__DIR__))."/includes/config/Config.php";
 class DB {
