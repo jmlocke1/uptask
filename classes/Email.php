@@ -39,7 +39,6 @@ class Email {
 		$contenido .= "</html>";
 
 		$mail->Body = $contenido;
-		debuguear($mail);
 		// Enviar el email
 		$mail->send();
 	}
