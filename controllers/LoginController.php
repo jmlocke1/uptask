@@ -200,7 +200,7 @@ class LoginController {
 	}
 
 	public static function confirmar(Router $router) {
-		$token = s($_GET['token']);
+		$token = $_GET['token'];
 		if(!$token){
 			header('Location: /');
 			die();
