@@ -34,7 +34,7 @@ class Email {
 
 		$contenido = '<html>';
 		$contenido .= "<p><strong>Hola ". $this->nombre ." </strong> Has creado tu cuenta en UpTask, solo debes confirmarla en el siguiente enlace</p>";
-		$contenido .= "<p>Presiona aquí: <a href='https://uptask.test/confirmar?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
+		$contenido .= "<p>Presiona aquí: <a href='https://". Config::DOMAIN_PROJECT ."/confirmar?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
 		$contenido .= "<p>Si tú no creaste esta cuenta, puedes ignorar este mensaje</p>";
 		$contenido .= "</html>";
 
