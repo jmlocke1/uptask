@@ -21,7 +21,7 @@ class Email {
 		$mail->isSMTP();
 		$mail->Host = Config::MAIL_HOST;
 		$mail->SMTPAuth = true;
-		$mail->Port = 2525;
+		$mail->Port = Config::MAIL_PORT;
 		$mail->Username = Config::MAIL_USERNAME;
 		$mail->Password = Config::MAIL_PASSWORD;
 
@@ -39,6 +39,7 @@ class Email {
 		$contenido .= "</html>";
 
 		$mail->Body = $contenido;
+		debuguear($mail);
 		// Enviar el email
 		$mail->send();
 	}
@@ -48,7 +49,7 @@ class Email {
 		$mail->isSMTP();
 		$mail->Host = Config::MAIL_HOST;
 		$mail->SMTPAuth = true;
-		$mail->Port = 2525;
+		$mail->Port = Config::MAIL_PORT;
 		$mail->Username = Config::MAIL_USERNAME;
 		$mail->Password = Config::MAIL_PASSWORD;
 
