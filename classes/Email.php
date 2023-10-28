@@ -61,7 +61,7 @@ class Email {
 
 		$contenido = '<html>';
 		$contenido .= "<p><strong>Hola ". $this->nombre ." </strong> Parece que has olvidado tu password, sigue el siguiente enlace para recuperarlo</p>";
-		$contenido .= "<p>Presiona aquí: <a href='https://uptask.test/reestablecer?token=" . $this->token . "'>Reestablecer Password</a></p>";
+		$contenido .= "<p>Presiona aquí: <a href='https://". Config::DOMAIN_PROJECT ."/reestablecer?token=" . $this->token . "'>Reestablecer Password</a></p>";
 		$contenido .= "<p>Si tú no creaste esta cuenta, puedes ignorar este mensaje</p>";
 		$contenido .= "</html>";
 
