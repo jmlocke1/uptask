@@ -1,5 +1,4 @@
 <?php
-use ConfigLocal;
 
 define('DIR_ROOT', dirname(dirname(__DIR__)));
 define('FUNCIONES_URL', DIR_ROOT.'/funciones');

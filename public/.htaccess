@@ -1,4 +1,3 @@
-Options +FollowSymLinks
 RewriteEngine On
 # Redirige la url a una url segura con https
 RewriteCond %{HTTPS} off
